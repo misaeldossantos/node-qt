@@ -16,7 +16,9 @@
     "package_name": "{module_name}-v{version}-{napi_build_version}-{platform}-{arch}.tar.gz"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.168",
     "cross-env": "^6.0.3",
+    "lodash": "^4.17.20",
     "node-addon-api": "^2.0.0",
     "node-pre-gyp": "^0.13.0"
   },
