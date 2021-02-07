@@ -1,0 +1,91 @@
+[
+     {
+          "qtComponent": "QScrollArea",
+          "includes": [
+               "<QWidget>",
+               "<QAbstractScrollArea>",
+               "\"qscrollbar.hpp\""
+          ],
+          "methods": [
+               {
+                    "name": "setWidget",
+                    "params": "QWidgetWrap"
+               },
+               {
+                    "name": "setWidgetResizable",
+                    "params": "Boolean"
+               },
+               {
+                    "name": "setGeometry",
+                    "params": "Integer,Integer,Integer,Integer",
+                    "paramsRequired": true
+               },
+               {
+                    "name": "setViewport",
+                    "params": "QWidgetWrap"
+               },
+               {
+                    "name": "setCornerWidget",
+                    "params": "QWidgetWrap"
+               },
+               {
+                    "name": "maximumViewportSize",
+                    "returns": {
+                         "attrs": {
+                              "$source": "maximumViewportSize()",
+                              "height": "Number",
+                              "width": "Number",
+                              "rheight": "Number",
+                              "rwidth": "Number"
+                         }
+                    }
+               },
+               {
+                    "name": "sizeHint",
+                    "returns": {
+                         "attrs": {
+                              "$source": "maximumViewportSize()",
+                              "height": "Number",
+                              "width": "Number",
+                              "rheight": "Number",
+                              "rwidth": "Number"
+                         }
+                    }
+               },
+               {
+                    "name": "setHorizontalScrollBar",
+                    "params": "QScrollBarWrap"
+               },
+               {
+                    "name": "setVerticalScrollBar",
+                    "params": "QScrollBarWrap"
+               }
+          ],
+          "subClass": {
+               "extends": "QScrollArea",
+               "includes": [
+                    "<QWheelEvent>"
+               ],
+               "events": [
+                    {
+                         "name": "wheelEvent",
+                         "type": "QWheelEvent",
+                         "attrs": {
+                              "angleDelta": {
+                                   "$source": "angleDelta",
+                                   "x": "Number",
+                                   "y": "Number",
+                                   "rx": "Number",
+                                   "ry": "Number"
+                              },
+                              "inverted": "Boolean"
+                         }
+                    }
+               ]
+          }
+     },
+     {
+          "qtComponent": "QScrollBar",
+          "methods": []
+     }
+]
